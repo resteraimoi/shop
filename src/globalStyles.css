@@ -1,0 +1,36 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    
+}
+*:focus {
+    outline: 0;
+}
+
+:root {
+    --orange-clr: hsl(26, 100%, 55%);
+    --pale-orange-clr: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --gray-clr: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+}
+.button {
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    border-radius: 10px;
+    border-style: none;
+    background-color: var(--orange-clr);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
