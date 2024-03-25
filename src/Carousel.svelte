@@ -40,7 +40,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="modal-outer {imgModalVisible? '' : 'hidden'}">
     <div class="modal-inner">
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <!-- svelte-ignore a11y-no-static-element-interactions -->
         <div class="close-icon" on:click={imgModalToggle}>
             <svg class="close-icon-svg" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" /></svg>
         </div>
@@ -64,9 +64,8 @@
         <div class="modal-preview-outer">
             <div class="modal-preview-inner">
                     {#each images as imageURL, index (index)}
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
+                        <!-- svelte-ignore a11y-no-static-element-interactions -->
                         <div class="preview-product-desktop" class:active={index === slides} on:click={() => previewClicker(index)}>
-                            <!-- svelte-ignore a11y-click-events-have-key-events -->
                             <img class="img-preview" src={imageURL} alt={`product`}  />
                         </div>
                     {/each}
@@ -82,6 +81,7 @@
             {#each images as imageURL, index (index)}
             <li class="{desktop? 'product-image-desktop': 'product-image'}" class:active={index === slides}>
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
                 <img src={imageURL} alt={`product #${index + 1}`} on:click={imgModalToggle}/>
             </li>
             {/each}
@@ -92,9 +92,9 @@
     <div class="preview-outer">
         <div class="preview-inner">
                 {#each images as imageURL, index (index)}
+                    <!-- svelte-ignore a11y-no-static-element-interactions -->
                     <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <div class="preview-product-desktop" class:active={index === slides} on:click={() => previewClicker(index)}>
-                        <!-- svelte-ignore a11y-click-events-have-key-events -->
                         <img class="img-preview" src={imageURL} alt={`product`} />
                     </div>
                 {/each}
